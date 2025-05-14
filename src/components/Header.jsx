@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'; 
 
-import { NavLink } from 'react-router-dom'; 
 
 import { useState } from 'react'; 
 
@@ -12,7 +10,7 @@ const Header = () => {
      useState(false); 
      
      const navLinks = [
-       { name: 'Home', path: '/' }, 
+      { name: 'Home', path: '/' }, 
        { name: 'About', path: '#about' },
         { name: 'Projects', path: '#projects' },
          { name: 'Blog', path: '#blog' }, 

@@ -52,7 +52,7 @@ import '../styles/components/Hero.css'
                                              initial={{ opacity: 0, x: 50 }} 
                                              animate={{ opacity: 1, x: 0 }} 
                                              transition={{ duration: 0.6, delay: 0.2 }} > 
-                                             <img src="/assets/profile.jpg" alt="Bigshow image" className="profile-pic" /> </motion.div> </div> </section> ); 
+                                             <img src="/assets/profile.jpg" alt="Bigshow " className="profile-pic" /> </motion.div> </div> </section> ); 
                                             }; 
                                             
                                             export default Hero;
