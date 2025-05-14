@@ -1,0 +1,87 @@
+.hero {
+     min-height: 100vh;
+      padding: 80px 2rem 0;
+       background: linear-gradient(to bottom, #0a0a0a, #121212);
+        display: flex;
+         align-items: center;
+         } 
+         .hero-container {
+             display: grid;
+              grid-template-columns: 1fr 1fr; 
+              gap: 4rem;
+               max-width: 1200px; 
+               margin: 0 auto; 
+               align-items: center;
+
+            } /* Left Column - Text & Social */
+             .hero-content { 
+                display: flex;
+                 flex-direction: column;
+                  height: 100%;
+                 }
+                  .greeting {
+                     color: #64ffda;
+                      font-size: 1.1rem; 
+                      margin-bottom: 1rem;
+                     } 
+                     .name { 
+                        font-size: clamp(2.5rem, 8vw, 4rem);
+                         font-weight: 700;
+                          margin-bottom: 0.5rem;
+                           background: linear-gradient(to right, #e0e0e0, #64ffda);
+                            -webkit-background-clip: text;
+                             background-clip: text;
+                              color: transparent;
+                               line-height: 1.1;
+                             } 
+                             .title { 
+                                color: #8892b0;
+                                 font-size: clamp(1.25rem, 4vw, 1.75rem);
+                                  margin-bottom: 2rem;
+                                 } 
+                                 .intro { 
+                                    color: #ccd6f6;
+                                     line-height: 1.8;
+                                      margin-bottom: 3rem;
+                                       max-width: 600px; 
+                                    } 
+                                    /* CTA Buttons */ 
+                                    .cta-buttons { 
+                                        display: flex;
+                                         gap: 1.5rem;
+                                          margin-bottom: auto;
+                                           /* Pushes social links down */ }
+                                            .btn { 
+                                                padding: 1rem 2rem;
+                                                 border-radius: 4px;
+                                                  font-weight: 500;
+                                                   transition: all 0.3s ease;
+                                                    display: inline-flex;
+                                                     align-items: center;
+                                                     z-index:10;
+                                                     }
+                                                      .btn-primary { background: #64ffda; 
+                                                        color: #0a192f;
+                                                     } 
+                                                     .btn-secondary { 
+                                                        border: 1px solid #64ffda;
+                                                         color: #64ffda; 
+                                                        } 
+                                                        /* Social Links - Floating at bottom */ 
+                                                        .hero-social { display: flex;
+                                                             gap: 20px; 
+                                                             margin-top: 40px;
+                                                              /* Sticks to bottom */ padding-top: 2rem;
+                                                              z-index:10;
+                                                             } 
+                                                             .hero-social a { 
+                                                                color: #ccd6f6;
+                                                                 font-size: 1.5rem; transition: all 0.3s ease; } 
+                                                                 .hero-social a:hover { 
+                                                                    color: #64ffda; 
+                                                                    transform: translateY(-5px); 
+                                                                } /* Right Column - Circular Profile Pic */ 
+                                                                .hero-image { display: flex;
+                                                                     justify-content: flex-end;
+                                                                     } .profile-pic { width: 350px; height: 350px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(100, 255, 218, 0.3); box-shadow: 0 0 20px rgba(100, 255, 218, 0.2), 0 0 40px rgba(100, 255, 218, 0.1); transition: all 0.3s ease; } .profile-pic:hover { transform: scale(1.03); box-shadow: 0 0 30px rgba(100, 255, 218, 0.3), 0 0 60px rgba(100, 255, 218, 0.15); } /* Glow Effect */ .hero-image::before { content: ''; position: absolute; width: 350px; height: 350px; border-radius: 50%; background: radial-gradient( circle, rgba(100, 255, 218, 0.1) 0%, transparent 70% ); z-index: -1; } /* Responsive */ @media (max-width: 900px) { .hero-container { grid-template-columns: 1fr; text-align: center; } .hero-content { align-items: center; } .hero-image { justify-content: center; order: -1; margin-bottom: 3rem; } .profile-pic { width: 250px; height: 250px; } .cta-buttons, .hero-social { justify-content: center; } }
+                                                                     

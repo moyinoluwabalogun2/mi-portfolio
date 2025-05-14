@@ -1,0 +1,122 @@
+/*.header { position: fixed; top: 0; 
+    
+    left: 0; width: 100%;
+     padding: 1rem 0; 
+     background-color: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px); 
+      z-index: 1000; 
+      border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+     } */
+      .header { position: fixed;
+         top: 0; 
+         left: 0; 
+         width: 100%; 
+         background: rgba(10, 10, 10, 0.98); 
+         backdrop-filter: blur(10px); 
+         z-index: 1000; padding: 1rem 0;
+          border-bottom: 1px solid rgba(100, 255, 218, 0.15);
+         } 
+         .header-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+             max-width: 1200px; 
+             margin: 0 auto;
+              padding: 0 2rem; 
+            } /* ========== LOGO STYLES ========== */ 
+            .logo { 
+                display: flex;
+                 align-items: center;
+                  gap: 0.75rem;
+                   z-index: 1002; 
+                   margin-right: auto;
+                    /* Pushes nav to far right */ } 
+                    .logo img { 
+                        height: 32px;
+                         width: auto; 
+                         transition: transform 0.3s ease;
+                         } /* ========== DESKTOP NAVIGATION ========== */
+                          .desktop-nav { 
+                            display: flex;
+                             margin-left: auto; 
+                             /* Ensures nav stays right */ } 
+                             
+                             .nav-list { 
+                                display: flex;
+                                 gap: 2.25rem; 
+                                 list-style: none; 
+                                 margin: 0; 
+                                 padding: 0;
+                                 } 
+                                 .nav-link {
+                                     position: relative;
+                                      color: #e0e0e0;
+                                       font-weight: 500;
+                                        font-size: 0.95rem;
+                                         letter-spacing: 0.5px; 
+                                         padding: 0.5rem 0; 
+                                         transition: all 0.3s ease;
+                                         } 
+                                         .nav-link:hover { color: #64ffda; }
+                                          .nav-link::after { 
+                                            content: '';
+                                             position: absolute;
+                                              bottom: 0;
+                                               left: 0;
+                                                width: 0;
+                                                 height: 2px;
+                                                  background: #64ffda;
+                                                   transition: width 0.3s ease; 
+                                                } .nav-link:hover::after {
+                                                     width: 100%; }
+                                                        
+                                                     /* ========== MOBILE MENU ========== */ 
+                                                     .mobile-menu-btn { 
+                                                        display: none; 
+                                                        background: none; 
+                                                        border: none; 
+                                                        color: white; 
+                                                        font-size: 1.75rem; 
+                                                        cursor: pointer; 
+                                                        z-index: 1001;
+                                                         padding: 0.25rem;
+                                                         } 
+                                                         .mobile-nav { 
+                                                         position: fixed; 
+                                                         top: 0; 
+                                                         right: -100%;
+                                                          /* Start off-screen */ width: 85%;
+                                                           max-width: 320px; 
+                                                           height: 100vh;
+                                                            background:  rgba(10, 10, 10, 0.98);
+                                                             z-index: 1000;
+                                                              padding: 6rem 2rem 2rem;
+                                                               transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+                                                                box-shadow: -5px 0 25px rgba(0,0,0,0.3); } 
+                                                                .mobile-nav.open { right: 0; /* Slide in */ } 
+                                                                .mobile-nav-list { display: flex;
+                                                                     flex-direction: column;
+                                                                      gap: 1.75rem;
+                                                                       list-style: none; 
+                                                                       padding: 0; 
+                                                                       } 
+                                                                       .mobile-nav-link { color: #e0e0e0;
+                                                                         font-size: 1.15rem;
+                                                                          padding: 0.75rem 1.5rem; 
+                                                                          border-radius: 4px; 
+                                                                          transition: all 0.3s ease; 
+                                                                          display: block; 
+                                                                        } 
+                                                                        .mobile-nav-link:hover { 
+                                                                            background: rgba(100, 255, 218, 0.1); 
+                                                                            color: #64ffda; 
+                                                                            transform: translateX(8px);
+                                                                         } /* ========== RESPONSIVE ADJUSTMENTS ========== */ 
+                                                                         @media (max-width: 768px) {
+                                                                             .desktop-nav { display: none; } 
+                                                                             .mobile-menu-btn { display: block; } 
+                                                                             .header-container { padding: 0 1.5rem; }
+                                                                              .mobile-nav { width: 75%; }
+                                                                             } /* Prevent body scroll when menu open */
+                                                                              body.menu-open { overflow: hidden; }

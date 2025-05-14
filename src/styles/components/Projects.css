@@ -1,0 +1,158 @@
+ /* src/components/Projects.css */ /* Base Styles */ .projects {
+   background: #0a0a0a; color: #e6f1ff;
+ } 
+ .projects::before{ content: '';
+   position: absolute;
+    top: 0;
+     left: 0;
+      width: 100%;
+       height: 100%;
+        background: radial-gradient(circle at 20% 80%, rgba(100, 255, 218, 0.1) 0%, transparent 30%), radial-gradient(circle at 80% 20%, rgba(100, 255, 218, 0.1) 0%, transparent 30%); z-index: 0; 
+  }
+ .projects-container {
+    width: 100%; 
+    max-width: 1200px;
+     margin: 0 auto;
+      padding: 0 20px;
+    } 
+    /* Section Header */ 
+    .section-header { 
+      text-align: center; margin-bottom: 60px; 
+   }
+    .section-title { 
+      font-size: 2.5rem;
+       font-weight: 700;
+        margin-bottom: 15px;
+         position: relative;
+          display: inline-block; 
+          color: #ccd6f6; 
+         } 
+         .section-title::after { 
+            content: '';
+             position: absolute; 
+             bottom: -10px; left: 50%; transform: translateX(-50%);
+              width: 70px; 
+              height: 3px;
+               background: linear-gradient(90deg, transparent 0%, #64ffda 50%, transparent 100%);
+                box-shadow: 0 0 10px #64ffda; 
+               } 
+               .section-header p { 
+                  font-size: 1.1rem;
+                   color: #8892b0;
+                    max-width: 600px; 
+                    margin: 0 auto; 
+                  } /* Projects Grid */ 
+                  .projects-grid {
+                      display: grid;
+                       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                        gap: 30px;
+                      } /* Project Card */ 
+                      .project-card { 
+                        background: rgba(17, 34, 64, 0.7); 
+                        backdrop-filter: blur(5px);
+                         -webkit-backdrop-filter: blur(5px); 
+                         border-radius: 10px;
+                          overflow: hidden; 
+                          border: 1px solid rgba(100, 255, 218, 0.1);
+                           box-shadow: 0 8px 32px rgba(2, 12, 27, 0.3), inset 0 0 16px rgba(100, 255, 218, 0.05); 
+                           transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                         }
+                          .project-card:hover {
+                            transform: translateY(-10px) scale(1.02);
+                             box-shadow: 0 12px 40px rgba(2, 12, 27, 0.5), 
+                             inset 0 0 24px rgba(100, 255, 218, 0.1);
+                              border: 1px solid #64ffda;
+                            } 
+                            .project-image {
+                               position: relative;
+                                height: 200px; 
+                                overflow: hidden; 
+                              } 
+                              .project-image img {
+                                  width: 100%;
+                                   height: 100%;
+                                    object-fit: cover;
+                                     transition: transform 0.5s ease;
+                                     } 
+                                     .project-card:hover .project-image img {
+                                        transform: scale(1.05); } 
+                                        .project-links {
+                                           position: absolute;
+                                            top: 0;
+                                             left: 0;
+                                              right: 0;
+                                               bottom: 0; 
+                                               background: linear-gradient( to bottom, rgba(100, 255, 218, 0.15), rgba(100, 255, 218, 0.25) );
+                                                opacity: 0; 
+                                                display: flex;
+                                                 justify-content: center;
+                                                  align-items: center;
+                                                   gap: 20px;
+                                                    transition: opacity 0.3s ease; 
+                                                   } 
+                                                   .project-card:hover .project-links { 
+                                                      opacity: 1; 
+                                                      animation: cyberGlow 2s infinite alternate; 
+                                                   } 
+                                                   .project-links a { 
+                                                      color: #0a192f; 
+                                                      background-color: #64ffda;
+                                                       width: 40px; 
+                                                       height: 40px; 
+                                                       border-radius: 50%; 
+                                                       display: flex; 
+                                                       justify-content: center; 
+                                                       align-items: center; 
+                                                       transition: all 0.3s ease; } 
+                                                       .project-links a:hover { 
+                                                         transform: scale(1.1); 
+                                                         box-shadow: 0 0 15px rgba(100, 255, 218, 0.5); 
+                                                         filter: brightness(1.1); 
+                                                      } 
+                                                      .project-content { padding: 25px; }
+                                                       .project-content h3 { 
+                                                         font-size: 1.4rem; 
+                                                         font-weight: 600; 
+                                                         margin-bottom: 12px; 
+                                                         color: #ccd6f6; 
+                                                      } 
+                                                      .project-content p {
+                                                          color: #8892b0;
+                                                           margin-bottom: 20px;
+                                                            font-size: 0.95rem;
+                                                             line-height: 1.6; 
+                                                            } 
+                                                            .project-tags { 
+                                                               display: flex; 
+                                                               flex-wrap: wrap;
+                                                                gap: 8px; 
+                                                                margin-bottom: 20px;
+                                                                } 
+                                                                .project-tags span {
+                                                                   font-size: 0.75rem;
+                                                                    padding: 4px 10px; 
+                                                                    background: rgba(16, 185, 129, 0.1);
+                                                                     border: 1px solid #64ffda; 
+                                                                     color: #64ffda;
+                                                                      border-radius: 4px;
+                                                                       letter-spacing: 0.05em; } /* Animations */
+                                                                        @keyframes cyberGlow { 0% { box-shadow: 0 0 5px #64ffda; } 50% { box-shadow: 0 0 20px #64ffda;
+                                                                         } 100% { 
+                                                                           box-shadow: 0 0 5px #64ffda; }
+                                                                         } /* Responsive Design */
+                                                                          @media (max-width: 768px) {
+                                                                            .projects { padding: 60px 0; background:  #0a0a0a; color: #e6f1ff; }
+                                                                             .section-title { font-size: 2rem; } 
+                                                                             .section-header p { font-size: 1rem; } 
+                                                                             .projects-grid { grid-template-columns: 1fr; } 
+                                                                           } /* Individual Card Animation Delays */
+                                                                            .projects-grid .project-card:nth-child(1) { 
+                                                                              animation-delay: 0.1s;
+                                                                            }
+                                                                             .projects-grid .project-card:nth-child(2) {
+                                                                               animation-delay: 0.2s;
+                                                                               } 
+                                                                               .projects-grid .project-card:nth-child(3) {
+                                                                                  animation-delay: 0.3s;
+                                                                                  }
+
