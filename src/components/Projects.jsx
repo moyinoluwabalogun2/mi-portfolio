@@ -16,7 +16,7 @@ import { motion } from 'framer-motion';
             description: 'a website where you can get all your comfy furnitures ',
              tags: ['JavaScript', 'html', 'CSS'], github: 'https://github.com/moyinoluwabalogun2/furniture-website',
               live: 'https://moyinoluwabalogun2.github.io/furniture-website', image: '/assets/furnitureez.jpeg' }, 
-            { id: 3, title: 'gadget store ', 
+            { id: 4, title: 'gadget store ', 
             description: 'its a modern, responsive and sleek ecommerce website for showcasing and managing tech products,complete with a secure admin dashboard and built using react ',
              tags: ['JavaScript', 'html', 'CSS','react'], github: 'https://github.com/moyinoluwabalogun2/gadget-store',
               live: 'https://favytechstore.netlify.app', image: '/assets/tech.jpeg' }, 
