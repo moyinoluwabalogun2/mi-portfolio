@@ -19,7 +19,7 @@ import { motion } from 'framer-motion';
             { id: 3, title: 'gadget store ', 
             description: 'its a modern, responsive and sleek ecommerce website for showcasing and managing tech products,complete with a secure admin dashboard and built using react ',
              tags: ['JavaScript', 'html', 'CSS','react'], github: 'https://github.com/moyinoluwabalogun2/gadget-store',
-              live: 'favytechstore.netlify.app', image: '/assets/tech.jpeg' }, 
+              live: 'https://favytechstore.netlify.app', image: '/assets/tech.jpeg' }, 
             ]; 
               const Projects = () => {
                  return ( 
