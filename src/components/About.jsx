@@ -3,7 +3,11 @@ import { motion } from 'framer-motion';
  import '../styles/components/About.css'
   const About = () => {
      const skills = [ { 
-        name: 'HTML/CSS', level: 95 }, { name: 'JavaScript', level: 90 }, { name: 'React', level: 85 }, 
+        name: 'HTML/CSS', level: 95 }, { name: 'JavaScript', level: 90 }, { name: 'React', level: 85 }, { name: 'React Router', level: 88 },{ name: 'Context API', level: 85 },{ name: 'Firebase Authentication', level: 90 },{ name: 'Firestore', level: 90 },
+        { name: 'Rest APIs', level: 90 },{ name: 'Git', level: 90 },{ name: 'Github', level: 90 },{ name: 'Netlify', level: 93 },{ name: 'Webpack', level: 85 },{ name: 'Jest', level: 90 },
+        { name: 'Responsive Web Design', level: 95 },
+        { name: 'UI Animations', level: 85 },
+        { name: 'Figma', level: 80 },
         
      ]; 
      

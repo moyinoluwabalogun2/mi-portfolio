@@ -20,6 +20,16 @@ import { motion } from 'framer-motion';
             description: 'its a modern, responsive and sleek ecommerce website for showcasing and managing tech products,complete with a secure admin dashboard and built using react ',
              tags: ['JavaScript', 'html', 'CSS','react'], github: 'https://github.com/moyinoluwabalogun2/gadget-store',
               live: 'https://favytechstore.netlify.app', image: '/assets/tech.jpeg' }, 
+              { id: 5, title: 'restaurant website ', 
+            description: 'its a modern, responsive and sleek restaurant website for showcasing and ordering foods and other features complete with a secure admin dashboard and built using react ',
+             tags: ['JavaScript', 'html', 'CSS','react'], github: 'https://github.com/moyinoluwabalogun2/restaurant',
+              live: 'https://epicureanfood.netlify.app', image: '/assets/restuarant.jpg' },
+              { id: 6, title: 'digital launchpad ', 
+            description: 'its a modern, responsive and sleek sales page where users have to pay before accessing the products with a  good admin dashboard and built using react ',
+             tags: ['JavaScript', 'html', 'CSS','react'], github: 'https://github.com/moyinoluwabalogun2/salespage',
+              live: 'https://salespa.netlify.app', image: '/assets/salespage.jpg' }
+
+              
             ]; 
               const Projects = () => {
                  return ( 
