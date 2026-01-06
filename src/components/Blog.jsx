@@ -71,7 +71,11 @@ const Blog = () => {
           <h2 className="section-title">Latest Tech Articles</h2>
           <p>Cutting-edge insights on web development</p>
         </motion.div>
-
+{apiError && (
+  <p className="api-error">
+    {apiError}
+    </p>
+)}
         {/* Blog grid */}
         <div className="blog-grid">
           {loading && (
